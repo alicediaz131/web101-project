@@ -1,0 +1,419 @@
+/*** You will not need this file until Unit 3 ***/
+
+
+
+
+
+/*** VSCodeEDU preview fix 
+
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+
+  When To Modify:
+  - If you change the background color of your webpage, you may need to update this rule too.
+***/
+html {
+    background-color: var(--bg-color);
+}
+
+/*** body ***
+  
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+
+  When To Modify:
+  - [ ] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container{
+  background-color: var(--bg-color-2);
+
+}
+
+body {
+    /* Add a background color or image */
+    background-color: var(--bg-color); /* see bottom of file for color variables */
+    /* Customize the default size, color, and font for text*/
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: Tahoma, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+    /* Put space around the edges of the webpage */
+    margin: 50px;
+}
+
+/*** Text ***
+  
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+.rotated {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+h1{
+    color:--text-color;
+    -webkit-text-stroke: 1px rgb(75, 72, 72);
+    font-size: 200px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+h2{
+    color:--text-color;
+    -webkit-text-stroke: 1px rgb(161, 161, 161);
+    font-size: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+h3{
+    color:rgb(252, 244, 30);
+    -webkit-text-stroke: 1px black;
+    font-size: 35px;
+    font-family: Arial, sans-serif
+
+}
+
+h4 {
+    
+}
+
+p {
+    -webkit-text-stroke:0.05px red;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+a,
+a * {
+    background-color: rgb(195, 230, 241);
+    margin:8px;
+    padding: 4px;
+    font-size: 18px;
+    /* border: 2px solid blue; */
+&:link{
+    color: blue;
+
+}
+
+&:visited{
+      color: magenta
+
+}
+
+&:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    color: blueviolet
+}
+
+&:active{
+      text-decoration: underline;
+    font-weight: bold;
+    color: red;
+}
+    
+}
+button{
+    
+    background-color: var(--button-color);
+    margin: 5px;
+    border-radius: 5px;
+    padding: 25px;
+    border: none;
+    cursor: pointer;            /* makes the cursor change when over button */
+    color:white;
+}
+
+
+button:hover {
+  background-color: var(--button-hover-color);
+  color:rgb(228, 228, 228);
+}
+
+button:active {
+  background-color: var(--button-active-color);
+  color:rgb(199, 199, 199);
+}
+
+/*** header ***
+    color:#1f1f1f;
+  color:#2e2e2e;
+  Purpose:
+  - Add style rules for your website's header section
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.header-container { /* Example A: This styles elements with class="header" Add rules for padding-top and margin-bottom to create spacing around your header
+Add a rule for text-align so any text in your header appears the way you want*/
+    padding-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.header-item:nth-of-type(1){
+  position: relative; 
+  height: 650px; 
+  display: inline-flex;  
+  align-items: flex-end;
+  width: 50%;
+  min-width: fit-content;
+  max-width: fit-content;
+}
+
+.header-item:nth-of-type(2){
+  width: 50%;
+  text-align: center;
+  
+  text-decoration: line-through;
+  text-decoration-style:dotted;
+  font-style: italic;
+  font-size: 600%;
+  min-width: fit-content;
+  max-width: fit-content;
+
+}
+
+#header-img{/* Define rules for the left and right margins around your header image
+Define a rule for the width of your image
+Define a rule for the max-width to cap how large the image can appear on your page.
+*/
+
+display: flex;
+justify-content: flex-start;
+width: 40%;
+max-width: 700px;
+max-height: 700px;
+}
+
+#header-button{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  font-size:35px;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 25px;
+  border:#000000;
+  cursor: pointer;            /* makes the cursor change when over button */
+}
+/*** footer ***
+  
+  Purpose:
+  - Add style rules for your website's footer section
+
+  When To Modify:
+  - [ ] Project 3 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.footer { /* Example B: This styles elements with class="footer" */
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+
+}
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 10%;
+    background-color: purple;
+}
+
+.navbar ul li {
+    float: left;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color:lightmode;
+    text-align: left;
+    padding: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color:orangered;
+    color: purple;
+}
+
+/*** About Section ***
+  
+  Purpose:
+  - Add style rules for your website's About section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** Schedule Section ***
+  
+  Purpose:
+  - Add style rules for your website's Schedule section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** Links Section ***
+  
+  Purpose:
+  - Add style rules for your website's Links section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+
+/*** RSVP [PLACEHOLDER] [ADDED IN UNIT 6] ***/
+.rsvp-container {
+
+}
+/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+/* Default dark mode style */
+#theme-button{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  font-size:15px;
+  margin: px;
+  border-radius: 10px;
+  padding: 10px;
+  border:#000000;
+  cursor: pointer;
+  background-color: var(--bg-color-dark-mode);
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark-mode);
+  color:var(--text-color-dark-mode)
+}
+.dark-mode html{
+  background-color: var(--bg-color-dark-mode);
+}
+.dark-mode h1, 
+.dark-mode h2{
+    color:var(--text-color-dark-mode);
+    -webkit-text-stroke: 1px black;
+}
+.dark-mode h3{
+  color:rgb(211, 204, 0);
+
+}
+.dark-mode p{
+  color:var(--text-color-dark-mode);
+
+}
+
+.dark-mode button{
+  background-color: var(--button-color-dark-mode);
+  color: black;
+}
+.dark-mode button:hover{
+  background-color: var(--button-hover-color-dark-mode);
+  color: rgb(31, 31, 31);
+}
+.dark-mode button:active{
+  background-color: var(--button-active-color-dark-mode);
+  color: rgb(41, 41, 41);
+}
+
+.dark-mode #theme-button{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode .container {
+    background-color: var(--bg-color-2-dark-mode);
+}
+
+
+/* Example: Different dark mode style for visited links */
+.dark-mode a:visited * {
+
+}
+
+
+
+/*** Custom Colors (OPTIONAL) ***
+  
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+
+  When To Modify:
+  - [ ] Any time (OPTIONAL)
+***/
+
+:root {
+    /* Light Mode */
+    --bg-color: #e4e2dd;
+    --bg-color-2: #c0beba;
+    --text-color: #2b2b2bcb;
+    --button-color:  rgb(138, 5, 131);
+    --button-hover-color: rgb(114, 4, 108);
+    --button-active-color: rgb(94, 0, 89);
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #2b2b2b;
+    --bg-color-2-dark-mode: #464646;
+    --text-color-dark-mode: #e4e2dd;
+    --button-color-dark-mode:  rgb(255, 69, 0);
+    --button-hover-color-dark-mode: rgb(255, 96, 38);
+    --button-active-color-dark-mode: rgb(255, 121, 72);
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
+
+
+
+
